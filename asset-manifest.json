@@ -1,13 +1,14 @@
 {
   "files": {
-    "main.css": "/netfilx_app/static/css/main.8ba6fc53.css",
-    "main.js": "/netfilx_app/static/js/main.37887567.js",
+    "main.css": "/netfilx_app/static/css/main.945d060b.css",
+    "main.js": "/netfilx_app/static/js/main.0912a299.js",
+    "static/media/KR-ko-20221031-popsignuptwoweeks-perspective_alpha_website_medium.jpg": "/netfilx_app/static/media/KR-ko-20221031-popsignuptwoweeks-perspective_alpha_website_medium.b844d749edd9265c9586.jpg",
     "index.html": "/netfilx_app/index.html",
-    "main.8ba6fc53.css.map": "/netfilx_app/static/css/main.8ba6fc53.css.map",
-    "main.37887567.js.map": "/netfilx_app/static/js/main.37887567.js.map"
+    "main.945d060b.css.map": "/netfilx_app/static/css/main.945d060b.css.map",
+    "main.0912a299.js.map": "/netfilx_app/static/js/main.0912a299.js.map"
   },
   "entrypoints": [
-    "static/css/main.8ba6fc53.css",
-    "static/js/main.37887567.js"
+    "static/css/main.945d060b.css",
+    "static/js/main.0912a299.js"
   ]
 }
