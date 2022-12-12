@@ -9,7 +9,7 @@ function Nav() {
 
   useEffect(()=>{
     window.addEventListener("scroll", ()=>{
-      console.log("window.scrollY", window.scrollY);
+      //console.log("window.scrollY", window.scrollY);
       if(window.scrollY > 50){
         setShow(true);
       }else{
@@ -30,7 +30,7 @@ function Nav() {
       <img 
         src='https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Netflix_2015_logo.svg/170px-Netflix_2015_logo.svg.png' alt='Netflix logo'
         className='nav__logo'
-        onClick={()=> navigate('/')} 
+        onClick={()=> (window.location.href = "/netfilx_app")} 
       />
 
       <input type="search" value={searchValue} onChange={onChange} placeholder="영화를 검색해주세요." className='nav__input' />

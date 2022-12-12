@@ -1,32 +1,64 @@
-import request from "./api/request";
-import Banner from "./components/Banner";
 import Footer from "./components/Footer";
 import Nav from "./components/Nav";
-import Row from "./components/Row";
 import {Routes, Route , Outlet} from "react-router-dom";
 import './styles/App.css'
 import MainPage from "./routes/MainPage";
 import DetailPage from "./routes/DetailPage";
 import SearchPage from "./routes/SearchPage";
+import { useEffect, useState } from "react";
+import Auth from "./routes/Auth";
+import { onAuthStateChanged } from "firebase/auth";
+import { authService } from "./fbase";
 
-const Layout = () => {
-  return(
-    <div>
-      <Nav />
-      <Outlet />
-      <Footer />
-    </div>
-  )
-}
+
+
+
+
 function App() {
+
+  const [init, setInit] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [userObj, setUserObj] = useState(null);
+
+  useEffect(() => { 
+    onAuthStateChanged(authService, (user)=>{  //현재 로그인한 사람의 정보
+      if(user){
+        //user is signed in
+        setIsLoggedIn(user);
+        setUserObj(user);
+        //const uid = user.uid;
+
+      } else{ //로그인한 사용자가 없으면 로그아웃
+        setIsLoggedIn(false);
+        //user us signed out
+      }
+      setInit(true);
+    });
+  }, []) ;
+
+  const Layout = () => {
+    return(
+      <div>
+        <Nav init={init} userObj={userObj} isLoggedIn={Boolean(isLoggedIn)} />
+        <Outlet />
+        <Footer />
+      </div>
+    )
+  }
+
   return (
     <div className="app">
       <Routes>
+        
         <Route path="/" element={<Layout />}>
           <Route index element={<MainPage />} />
           <Route path=":movieId" element={<DetailPage />} />
           <Route path="search" element={<SearchPage />} />
-        </Route>
+        </Route> 
+        
+          <Route path="/" element={<Auth />} />
+        
+
       </Routes>
 
       {/* <Nav />

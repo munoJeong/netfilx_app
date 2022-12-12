@@ -1,0 +1,32 @@
+.modal_content{
+  position: relative;
+  z-index: 10;
+  
+  color: #fff;
+}
+.modal_con_input{
+  margin-left: 50px;
+}
+.modal_title{
+  font-size: 50px;
+  
+}
+.modal_details{
+  font-size: 30px;
+}
+.modal_overview{
+  margin: 20px 0;
+  width: 600px;
+}
+.modal_play{
+  width: 150px;
+  height: 50px;
+  border-radius: 5px;
+  background: #fff;
+  display: flex;
+}
+.modal_play_text{
+  color: #000;
+  font-weight: bold;
+  font-size: 30px;
+}

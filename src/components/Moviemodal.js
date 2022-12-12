@@ -22,6 +22,7 @@ function Moviemodal({backdrop_path, title, overview, name, release_data,
               <h2 className='modal__title'>{title ? title : name}</h2>
               <p className='modal__details'>평점 : {vote_average}</p>
               <p className='modal__overview'>{overview}</p>
+              
             </div>
           </div>
         </div>

@@ -1,0 +1,18 @@
+.authContainer{
+  display: flex; flex-direction: column; height: 100vh; justify-content: center; align-items: center; background: url(KR-ko-20221031-popsignuptwoweeks-perspective_alpha_website_medium.jpg) no-repeat 0 0;
+  div{
+    width: 450px;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 50px;
+    padding-top: 200px;
+    
+    .authBtns{
+      
+      display: flex; justify-content: space-between; width: 100%; max-width: 320px; 
+      .authBtn{
+        cursor: pointer; background: #fff; border-radius: 20px; border: none; padding: 10px 0px; font-size: 12px; text-align: center;
+      }
+    }
+  }
+  
+}
