@@ -54,7 +54,7 @@ function AuthForm() {
         onChange={onChange} value = {password} className="authInput"
         />
 
-        <Link to ="main"> <input type ="submit" className='authInput authSubmit' value={ '로그인' }/></Link>
+        <Link to ="/"> <input type ="submit" className='authInput authSubmit' value={ '로그인' }/></Link>
         
         {error && 
         <span className='authError'>{error}</span>
